@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFramework />
         <TargetFrameworks>netcoreapp3.1;net472;net48</TargetFrameworks>
-        <IsPackable>false</IsPackable>
         <RootNamespace />
+        <DocumentationFile />
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,15 +17,15 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="coverlet.msbuild" Version="2.7.0">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.CodeCoverage" Version="16.4.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
     </ItemGroup>
@@ -33,8 +35,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj" />
-      <ProjectReference Include="..\..\src\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj" />
+        <ProjectReference Include="..\..\src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj" />
+        <ProjectReference Include="..\..\src\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj" />
     </ItemGroup>
 
 </Project>

@@ -13,7 +13,8 @@ namespace MGR.Extensions.Localization.PortableObject.Sample
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddPortableObjectLocalization(options => options.ResourcesFolder = "loc");
+            services.AddCors(f => { });
+            services.AddPortableObjectLocalization(options => options.SetResourcesFolder("loc"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,10 +12,14 @@
         <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="3.1.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
         <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj" />
+        <ProjectReference Include="..\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj" />
     </ItemGroup>
 
 </Project>

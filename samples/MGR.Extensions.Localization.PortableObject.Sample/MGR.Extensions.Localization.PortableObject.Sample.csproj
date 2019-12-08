@@ -1,11 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <OutputType>Exe</OutputType>
+        <DocumentationFile />
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj" />
+    </ItemGroup>
 
 </Project>

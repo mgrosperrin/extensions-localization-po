@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace MGR.PortableObject.Parsing
 {
+    /// <summary>
+    /// A parser of PortableObject file.
+    /// </summary>
     public class PortableObjectParser
     {
         /*
@@ -10,7 +13,11 @@ namespace MGR.PortableObject.Parsing
          * https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html#Plural-forms
          * https://www.gnu.org/software/gettext/manual/html_node/Translating-plural-forms.html#Translating-plural-forms
          */
-
+        /// <summary>
+        /// Parses a PortableObject file.
+        /// </summary>
+        /// <param name="textReader">The <see cref="TextReader"/> representing the content of the file.</param>
+        /// <returns>The translations parsed from the file content.</returns>
         public PortableObjectTranslations Parse(TextReader textReader)
         {
             var translationsBuilder = new PortableObjectTranslationsBuilder();
@@ -23,6 +30,11 @@ namespace MGR.PortableObject.Parsing
             var translations = translationsBuilder.Build();
             return translations;
         }
+        /// <summary>
+        /// Parses a PortableObject file.
+        /// </summary>
+        /// <param name="textReader">The <see cref="TextReader"/> representing the content of the file.</param>
+        /// <returns>The translations parsed from the file content.</returns>
         public async Task<PortableObjectTranslations> ParseAsync(TextReader textReader)
         {
             var translationsBuilder = new PortableObjectTranslationsBuilder();

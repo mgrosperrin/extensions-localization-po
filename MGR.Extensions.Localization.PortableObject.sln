@@ -33,6 +33,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A806DE94-014D-4BC2-9F8B-ABC905DF2D3A}"
 	ProjectSection(SolutionItems) = preProject
 		build\azure-pipelines.yml = build\azure-pipelines.yml
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		MGR.Extensions.Localization.PortableObject.ruleset = MGR.Extensions.Localization.PortableObject.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles", "{7BFD6B2F-D4A8-42C4-8EFA-60B9FDFEECD9}"
+	ProjectSection(SolutionItems) = preProject
+		src\SharedFiles\CommonAssemblyInfo.cs = src\SharedFiles\CommonAssemblyInfo.cs
+		src\SharedFiles\VersionAssemblyInfo.cs = src\SharedFiles\VersionAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Global
@@ -71,6 +80,7 @@ Global
 		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7} = {9CEAB859-55A0-4B48-9230-89C8B9F6AE00}
 		{90C2F741-63B5-4F27-93A6-C1046515D8F7} = {04E077B6-F325-40EB-BD14-FCB6615B28BC}
 		{D49523A1-10F8-4F8E-8654-191E5BC22A83} = {1EA7B64F-B8D5-48D3-96E8-62996F82A9F3}
+		{7BFD6B2F-D4A8-42C4-8EFA-60B9FDFEECD9} = {9CEAB859-55A0-4B48-9230-89C8B9F6AE00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D26ED50-5F2C-457F-B47D-863B93D4527E}
