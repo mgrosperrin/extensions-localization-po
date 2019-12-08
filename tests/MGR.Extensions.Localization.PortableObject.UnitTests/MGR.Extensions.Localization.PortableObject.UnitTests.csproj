@@ -26,8 +26,6 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
-        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
-        <DotNetCliToolReference Include="dotnet-reportgenerator-cli" Version="4.0.14" />
     </ItemGroup>
 
     <ItemGroup>
