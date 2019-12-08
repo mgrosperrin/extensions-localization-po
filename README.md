@@ -1,2 +1,3 @@
-# extensions-localization-po
-.NET Localization extensions based on PO files
+# MGR.Extensions.Localization.PortableObject
+
+.NET Localization extension based on PortableObject files
