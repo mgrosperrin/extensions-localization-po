@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace MGR.PortableObject.Parsing
 {
@@ -39,6 +38,7 @@ namespace MGR.PortableObject.Parsing
 
         private string DebuggerDisplay
         {
+            // ReSharper disable once UnusedMember.Local
             get
             {
                 var debugTranslations = HasTranslation ?

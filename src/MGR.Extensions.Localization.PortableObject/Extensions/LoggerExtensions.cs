@@ -9,7 +9,7 @@ namespace Microsoft.Extensions.Logging
 
         public static void UnableToFindPortableObjectForCulture(this ILogger logger, string cultureName)
         {
-            UnableToFindPortableObjectForCultureAction(logger, cultureName, null);
+            UnableToFindPortableObjectForCultureAction(logger, cultureName, new Exception());
         }
     }
 }

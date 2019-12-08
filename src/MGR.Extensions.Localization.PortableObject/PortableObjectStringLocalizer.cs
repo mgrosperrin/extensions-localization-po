@@ -5,7 +5,7 @@ using MGR.PortableObject.Parsing;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
-namespace MGR.Extensions.Localization.POFile
+namespace MGR.Extensions.Localization.PortableObject
 {
     class PortableObjectStringLocalizer : IStringLocalizer
     {
@@ -13,9 +13,9 @@ namespace MGR.Extensions.Localization.POFile
 
         private readonly PortableObjectTranslationsProvider _portableObjectTranslationsProvider;
         private readonly string _context;
-        private readonly CultureInfo _culture;
+        private readonly CultureInfo? _culture;
 
-        public PortableObjectStringLocalizer(PortableObjectTranslationsProvider portableObjectTranslationsProvider, string context, ILogger logger, CultureInfo culture)
+        public PortableObjectStringLocalizer(PortableObjectTranslationsProvider portableObjectTranslationsProvider, string context, ILogger logger, CultureInfo? culture)
         {
             _portableObjectTranslationsProvider = portableObjectTranslationsProvider;
             _context = context;

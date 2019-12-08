@@ -1,7 +1,7 @@
-﻿namespace MGR.Extensions.Localization.POFile
+﻿namespace MGR.Extensions.Localization.PortableObject
 {
     public class PortableObjectLocalizationOptions
     {
-        public string ResourcesFolder { get; set; }
+        public string ResourcesFolder { get; set; } = "Resources";
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace MGR.Extensions.Localization.POFile
+namespace MGR.Extensions.Localization.PortableObject
 {
     internal class PortableObjectStringLocalizerFactory : IStringLocalizerFactory
     {

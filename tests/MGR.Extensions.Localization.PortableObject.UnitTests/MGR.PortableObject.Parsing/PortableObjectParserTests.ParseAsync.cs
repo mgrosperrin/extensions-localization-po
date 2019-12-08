@@ -142,10 +142,15 @@ namespace MGR.PortableObject.Parsing
                 var parser = new PortableObjectParser();
 
                 var testAssembly = typeof(ParseAsync).Assembly;
-                using var resource =
-                    testAssembly.GetManifestResourceStream(fullResourceName) ?? throw new ArgumentException(nameof(resourceName));
-                using var reader = new StreamReader(resource);
-                return await parser.ParseAsync(reader);
+                using (var resource =
+                    testAssembly.GetManifestResourceStream(fullResourceName) ??
+                    throw new ArgumentException(nameof(resourceName)))
+                {
+                    using (var reader = new StreamReader(resource))
+                    {
+                        return await parser.ParseAsync(reader);
+                    }
+                }
             }
         }
     }

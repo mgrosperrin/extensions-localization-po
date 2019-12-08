@@ -1,5 +1,5 @@
 ﻿using System;
-using MGR.Extensions.Localization.POFile;
+using MGR.Extensions.Localization.PortableObject;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Localization;
 

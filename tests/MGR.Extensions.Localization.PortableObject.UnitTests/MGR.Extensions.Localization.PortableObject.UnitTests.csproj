@@ -1,10 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
-
+        <TargetFrameworks>netcoreapp3.1;net472;net48</TargetFrameworks>
         <IsPackable>false</IsPackable>
-
         <RootNamespace />
     </PropertyGroup>
 
@@ -16,10 +14,20 @@
         <EmbeddedResource Include="MGR.PortableObject.Parsing\Resources\*.po" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-        <PackageReference Include="xunit" Version="2.4.0" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
-        <PackageReference Include="coverlet.collector" Version="1.0.1" />
+        <PackageReference Include="coverlet.msbuild" Version="2.7.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeCoverage" Version="16.4.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
+        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+        <DotNetCliToolReference Include="dotnet-reportgenerator-cli" Version="4.0.14" />
     </ItemGroup>
 
     <ItemGroup>
@@ -27,7 +35,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\MGR.Extensions.Localization.POFile\MGR.Extensions.Localization.POFile.csproj" />
+      <ProjectReference Include="..\..\src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj" />
       <ProjectReference Include="..\..\src\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj" />
     </ItemGroup>
 

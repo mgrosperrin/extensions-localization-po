@@ -89,10 +89,9 @@ namespace MGR.PortableObject.Parsing
         private enum LineType
         {
             Unknown = 0,
-            Text = 1,
-            Context = 2,
-            Id = 3,
-            Translation = 4
+            Context = 1,
+            Id = 2,
+            Translation = 3
         }
     }
 }
