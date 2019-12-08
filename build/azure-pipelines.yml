@@ -54,7 +54,15 @@ stages:
       displayName: 'Copy Files to artifacts folder'
       inputs:
         SourceFolder: src/
-        Contents: '**/MGR.Extensions.Localization.PortableObject.*.nupkg;**/MGR.PortableObject.Parsing.*.nupkg'
+        Contents: '**/MGR.Extensions.Localization.PortableObject.*.*nupkg'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/nuget'
+        flattenFolders: true
+
+    - task: CopyFiles@2
+      displayName: 'Copy Files to artifacts folder'
+      inputs:
+        SourceFolder: src/
+        Contents: '**/MGR.PortableObject.Parsing.*.*nupkg'
         TargetFolder: '$(Build.ArtifactStagingDirectory)/nuget'
         flattenFolders: true
 
