@@ -1,3 +1,0 @@
-msgctxt "MGR.Localization"
-msgid "Unknown system error"
-msgstr "Erreur système inconnue"

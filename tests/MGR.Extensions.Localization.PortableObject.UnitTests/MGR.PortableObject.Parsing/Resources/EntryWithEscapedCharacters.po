@@ -1,2 +1,0 @@
-msgid "Line:\t\"{0}\"\n"
-msgstr "Ligne :\t\"{0}\"\n"

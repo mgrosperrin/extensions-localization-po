@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.87
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CEAB859-55A0-4B48-9230-89C8B9F6AE00}"
 EndProject
@@ -9,18 +9,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8D3C9783
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9D48E0F-FB50-4EA1-960E-223A48DC5E30}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		coverlet.runsettings = coverlet.runsettings
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
 		global.json = global.json
 		LICENSE = LICENSE
-		MGR.Extensions.Localization.PortableObject.sln.DotSettings = MGR.Extensions.Localization.PortableObject.sln.DotSettings
+		MGR.Extensions.Localization.PortableObject.lutconfig = MGR.Extensions.Localization.PortableObject.lutconfig
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MGR.Extensions.Localization.PortableObject", "src\MGR.Extensions.Localization.PortableObject\MGR.Extensions.Localization.PortableObject.csproj", "{7BE3A6E3-3043-4B89-AFA5-437292C0FE1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MGR.Extensions.Localization.PortableObject.UnitTests", "tests\MGR.Extensions.Localization.PortableObject.UnitTests\MGR.Extensions.Localization.PortableObject.UnitTests.csproj", "{06B36E33-2E1E-4346-B4F3-2DFEBEA05577}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MGR.PortableObject.Parsing", "src\MGR.PortableObject.Parsing\MGR.PortableObject.Parsing.csproj", "{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{04E077B6-F325-40EB-BD14-FCB6615B28BC}"
 EndProject
@@ -29,20 +31,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1EA7B64F-B8D5-48D3-96E8-62996F82A9F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docs", "docs\docs.csproj", "{D49523A1-10F8-4F8E-8654-191E5BC22A83}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A806DE94-014D-4BC2-9F8B-ABC905DF2D3A}"
-	ProjectSection(SolutionItems) = preProject
-		build\azure-pipelines.yml = build\azure-pipelines.yml
-		Directory.Build.props = Directory.Build.props
-		global.json = global.json
-		MGR.Extensions.Localization.PortableObject.ruleset = MGR.Extensions.Localization.PortableObject.ruleset
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedFiles", "SharedFiles", "{7BFD6B2F-D4A8-42C4-8EFA-60B9FDFEECD9}"
-	ProjectSection(SolutionItems) = preProject
-		src\SharedFiles\CommonAssemblyInfo.cs = src\SharedFiles\CommonAssemblyInfo.cs
-		src\SharedFiles\VersionAssemblyInfo.cs = src\SharedFiles\VersionAssemblyInfo.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,10 +46,6 @@ Global
 		{06B36E33-2E1E-4346-B4F3-2DFEBEA05577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06B36E33-2E1E-4346-B4F3-2DFEBEA05577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06B36E33-2E1E-4346-B4F3-2DFEBEA05577}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{90C2F741-63B5-4F27-93A6-C1046515D8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{90C2F741-63B5-4F27-93A6-C1046515D8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90C2F741-63B5-4F27-93A6-C1046515D8F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,10 +61,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7BE3A6E3-3043-4B89-AFA5-437292C0FE1C} = {9CEAB859-55A0-4B48-9230-89C8B9F6AE00}
 		{06B36E33-2E1E-4346-B4F3-2DFEBEA05577} = {8D3C9783-F686-4410-B334-DDBFBDBEC18E}
-		{CA585DCF-6C8D-4D9E-942A-B4DFAEBC60E7} = {9CEAB859-55A0-4B48-9230-89C8B9F6AE00}
 		{90C2F741-63B5-4F27-93A6-C1046515D8F7} = {04E077B6-F325-40EB-BD14-FCB6615B28BC}
 		{D49523A1-10F8-4F8E-8654-191E5BC22A83} = {1EA7B64F-B8D5-48D3-96E8-62996F82A9F3}
-		{7BFD6B2F-D4A8-42C4-8EFA-60B9FDFEECD9} = {9CEAB859-55A0-4B48-9230-89C8B9F6AE00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D26ED50-5F2C-457F-B47D-863B93D4527E}

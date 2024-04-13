@@ -1,0 +1,69 @@
+{
+    "metadata": [
+      {
+        "src": [
+          {
+            "files": [
+              "MGR.Extensions.Localization.PortableObject/MGR.Extensions.Localization.PortableObject.csproj"
+            ],
+            "exclude": [
+              "**/bin/**",
+              "**/obj/**"
+            ],
+            "src": "../src"
+          }
+        ],
+        "dest": "../artifacts/docs/obj/api",
+        "disableGitFeatures": false,
+        "disableDefaultFilter": false
+      }
+    ],
+    "build": {
+      "content": [
+        {
+          "files": [
+            "**/*.yml"
+          ],
+          "src": "../artifacts/docs/obj/api",
+          "dest": "api"
+        },
+        {
+          "files": [
+            "*.md",
+            "**/*.md",
+            "toc.yml"
+          ]
+        }
+      ],
+      "resource": [
+        {
+          "files": [
+            "images/**/*.*"
+          ]
+        }
+      ],
+      "dest": "../artifacts/_site",
+      "globalMetadata": {
+        "_appTitle": "MGR.Extensions.Localization.PortableObject documentation site",
+        "_enableSearch": true,
+        "_gitContribue": {
+          "repo": "https://github.com/mgrosperrin/extensions-localization-po",
+          "branch": "main"
+        },
+        "_gitUrlPattern": "github"
+      },
+      "fileMetadataFiles": [],
+      "template": [
+        "default"
+      ],
+      "postProcessors": [],
+      "markdownEngineName": "markdig",
+      "noLangKeyword": false,
+      "keepFileLink": false,
+      "cleanupCacheHistory": false,
+      "disableGitFeatures": false
+    },
+    "rules": {
+      "InvalidFileLink": "error"
+    }
+  }
