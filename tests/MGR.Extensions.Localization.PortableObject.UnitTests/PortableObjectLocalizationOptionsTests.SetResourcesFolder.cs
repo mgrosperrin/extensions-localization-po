@@ -15,10 +15,10 @@ public partial class PortableObjectLocalizationOptionsTests
         {
             // Arrange
             var options = new PortableObjectLocalizationOptions();
-            
+
             // Act
             options.SetResourcesFolder(string.Empty);
-            
+
             // Assert
             Assert.Equal(string.Empty, options.ResourcesFolder);
         }
@@ -28,7 +28,7 @@ public partial class PortableObjectLocalizationOptionsTests
             // Arrange
             var options = new PortableObjectLocalizationOptions();
             var resourcesFolder = "MyResources";
-            
+
             // Act
             options.SetResourcesFolder(resourcesFolder);
 
