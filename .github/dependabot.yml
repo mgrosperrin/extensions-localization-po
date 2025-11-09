@@ -27,3 +27,17 @@ updates:
       dotnet:
         patterns:
         - "*"
+  
+  - package-ecosystem: "dotnet-sdk" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "mgrosperrin"
+    commit-message:
+      prefix: "[.NET packages update] "
+      include: "scope"
+    groups:
+      dotnet:
+        patterns:
+        - "*"
